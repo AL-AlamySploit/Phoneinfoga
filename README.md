@@ -13,7 +13,6 @@ $ git clone https://github.com/AL-AlamySploit/Phoneinfoga
 
 $cd Phoneinfoga
 
-$ mv config.example.py config.py
 
 $ chmod 777 config.py phoneinfoga.py
 
