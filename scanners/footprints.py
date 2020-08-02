@@ -32,9 +32,9 @@ def osintIndividualScan():
         info("Generating URL on True People... ")
         plus(
             "https://www.truepeoplesearch.com/results?phoneno={}".format(
-                internationalNumber.replace(" ", "")
-            )
-        )
+                internationalNumber.replace(" ", "")))
+            
+        
 
     dorks = json.load(open("osint/individuals.json"))
 
@@ -42,8 +42,7 @@ def osintIndividualScan():
         if dork["dialCode"] is None or dork["dialCode"] == numberCountryCode:
             if customFormatting:
                 dorkRequest = replaceVariables(
-                    dork["request"], numberObj
-                ) + ' OR "{}"'.format(customFormatting)
+                    dork["request"], numberObj) + ' OR "{}"'.format(customFormatting)
             else:
                 dorkRequest = replaceVariables(dork["request"], numberObj)
 
@@ -68,8 +67,7 @@ def osintReputationScan():
     for dork in dorks:
         if customFormatting:
             dorkRequest = replaceVariables(
-                dork["request"], numberObj
-            ) + ' OR "{}"'.format(customFormatting)
+                dork["request"], numberObj) + ' OR "{}"'.format(customFormatting)
         else:
             dorkRequest = replaceVariables(dork["request"], numberObj)
 
